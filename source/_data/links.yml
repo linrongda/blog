@@ -1,0 +1,11 @@
+- links_category: Normal
+  has_thumbnail: false
+  list:
+    - name: Cai's Blog
+      link: https://blog.terraria.ink
+      description: 🥬🥬🥬
+      avatar: /images/cai.webp
+    - name: Baoshuo
+      link: https://baoshuo.ren
+      description: Even with a heavy past, accept it and continue moving forward.
+      avatar: https://cdn.jsdelivr.net/npm/bsi@0.0.7/avatar/96x96.webp

@@ -33,7 +33,7 @@ mkdir -pv /var/cache/nginx/client_temp
 
 ## 附上Nginx常用的配置
 
-- config编译配置：
+### config编译配置
 
 ```sh
 ./configure --prefix=/etc/nginx \
@@ -67,21 +67,19 @@ mkdir -pv /var/cache/nginx/client_temp
     --with-ld-opt='-Wl,-z,relro -Wl,-z,now -pie'
 ```
 
-- nginx.conf
+### nginx.conf
 
 ```nginx
-#user  nobody;
-worker_processes auto;
-worker_cpu_affinity auto;
-worker_rlimit_nofile 1024;
-
-#pid        logs/nginx.pid;
+#user nobody;
+worker_processes 		auto;
+worker_cpu_affinity 	auto;
+worker_rlimit_nofile 	1024;
 
 events {
-    worker_connections  1024;
-    use		epoll;
-    accept_mutex on;
-    multi_accept on;
+    worker_connections 	1024;
+    use					epoll;
+    accept_mutex 		on;
+    multi_accept 		on;
 
 }
 
@@ -89,34 +87,31 @@ http {
     include       mime.types;
     default_type  application/octet-stream;
 
-    #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
-    #                  '$status $body_bytes_sent "$http_referer" '
-    #                  '"$http_user_agent" "$http_x_forwarded_for"';
-
-    #access_log  logs/access.log  main;
+    access_log  off;
+    error_log 	/dev/null crit;
 
     sendfile            on;
     tcp_nopush          on;
     tcp_nodelay         on;
     keepalive_timeout   65;
     types_hash_max_size 4096;
-    proxy_hide_header Server;
-    proxy_hide_header X-Powered-By;
-    server_tokens off;
+    proxy_hide_header 	Server;
+    proxy_hide_header 	X-Powered-By;
+    server_tokens 		off;
 
-    gzip  on;
+    gzip  			on;
 	gzip_min_length 1k;
-	gzip_buffers 32 4k;
+	gzip_buffers 	32 4k;
 	gzip_comp_level 1;
-	gzip_types text/plain application/javascript application/x-javascript text/css application/xml application/json text/javascript application/x-httpd-php;
-	gzip_vary on;
+	gzip_types 		text/plain application/javascript application/x-javascript text/css application/xml application/json text/javascript application/x-httpd-php;
+	gzip_vary 		on;
 
 	include /etc/nginx/conf.d/*.conf;
 
 }
 ```
 
-- /usr/lib/systemd/system/nginx.service
+### /usr/lib/systemd/system/nginx.service
 
 ```txt
 [Unit]

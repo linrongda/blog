@@ -10,31 +10,31 @@
 # Docs: https://redefine-docs.ohevan.com/basic/info
 info:
   # Site title
-  title: LRD的极客分享
+  title: LRD's Blog
   # Site subtitle
   subtitle: lrd
   # Author name
   author: lrd
   # Site URL
-  url: https://lrd0.top
+  url: https://blog.lrd0.top
 # BASIC INFORMATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 # IMAGE CONFIGURATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
 # Docs: https://redefine-docs.ohevan.com/basic/defaults
 defaults:
   # Favicon
-  favicon: /images/redefine-favicon.svg
+  favicon: /images/transparent.png
   # Site logo
-  logo:
+  logo: /images/transparent.png
   # Site avatar
-  avatar: /images/redefine-avatar.svg
+  avatar: /images/transparent.png
 # IMAGE CONFIGURATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 # COLORS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
 # Docs: https://redefine-docs.ohevan.com/basic/colors
 colors:
   #Primary color
-  primary: "#A31F34"
+  primary: "#998200"
   # Secondary color (TBD)
   secondary:
   # Default theme mode initial value (will be overwritten by prefer-color-scheme)
@@ -76,7 +76,7 @@ global:
   # Website counter
   website_counter:
     url: https://cn.vercount.one/js # counter API URL (no need to change)
-    enable: true # enable website counter or not
+    enable: false # enable website counter or not
     site_pv: true # site page view
     site_uv: true # site unique visitor
     post_pv: true # post page view
@@ -95,9 +95,8 @@ global:
   # Whether to enable open graph
   open_graph:
     enable: true
-    image: /images/redefine-og.webp # default og:image
-    description: Hexo Theme Redefine, Redefine Your Hexo Journey.
-  # Google Analytics
+    image: /images/transparent.png # default og:image
+    description: LRD's Blog
   google_analytics:
     enable: false # Whether to enable Google Analytics
     id: # Google Analytics Measurement ID
@@ -128,13 +127,13 @@ home_banner:
     light: /images/wallhaven-wqery6-light.webp # light mode
     dark: /images/wallhaven-wqery6-dark.webp # dark mode
   # Home banner title
-  title: LRD
+  title: I'm LRD
   # Home banner subtitle
   subtitle:
     text: [welcome] # subtitle text, array
     hitokoto: # 一言配置
-      enable: false # Whether to enable hitokoto
-      show_author: false # Whether to show author
+      enable: true # Whether to enable hitokoto
+      show_author: true # Whether to show author
       api: https://v1.hitokoto.cn # API URL, can add types, see https://developer.hitokoto.cn/sentence/#%E5%8F%A5%E5%AD%90%E7%B1%BB%E5%9E%8B-%E5%8F%82%E6%95%B0
     typing_speed: 100 # Typing speed (ms)
     backing_speed: 80 # Backing speed (ms)
@@ -213,6 +212,9 @@ navbar:
     # Status:
     #   path: https://status.ohevan.com/
     #   icon: fa-regular fa-chart-bar
+    Friends:
+      path: /links
+      icon: fa-solid fa-link # can be empty
     About:
       path: /about
       icon: fa-regular fa-user
@@ -246,17 +248,17 @@ home:
     first_item: menu # First item in sidebar. menu, info
     announcement: # Announcement text
     show_on_mobile: true # Whether to show sidebar navigation on mobile sheet menu
-    links:
-      # Archives:
-      #   path: /archives
-      #   icon: fa-regular fa-archive # can be empty
-      # Tags:
-      #   path: /tags
-      #   icon: fa-regular fa-tags # can be empty
-      # Categories:
-      #   path: /categories
-      #   icon: fa-regular fa-folder # can be empty
-      # ...... # you can add more
+    # links:
+    #   Archives:
+    #     path: /archives
+    #     icon: fa-regular fa-archive # can be empty
+    #   Tags:
+    #     path: /tags
+    #     icon: fa-regular fa-tags # can be empty
+    #   Categories:
+    #     path: /categories
+    #     icon: fa-regular fa-folder # can be empty
+    #   # ...... # you can add more
   # Article date format
   article_date_format: auto # auto, relative, YYYY-MM-DD, YYYY-MM-DD HH:mm:ss etc.
   # Article excerpt length
@@ -304,7 +306,7 @@ articles:
   # Code block settings
   code_block:
     copy: true # Whether to enable code block copy button
-    style: mac # mac | simple
+    style: simple # mac | simple
     highlight_theme: # Color scheme for highlightjs code highlighting. For preview, see https://highlightjs.org/examples
       light: github # light mode theme, support: github, atom-one-light, default
       dark: vs2015 # dark mode theme, support: github-dark, monokai-sublime, vs2015, night-owl, atom-one-dark, nord, tokyo-night-dark, a11y-dark, agate
@@ -403,19 +405,19 @@ comment:
 # Docs: https://redefine-docs.ohevan.com/footer
 footer:
   # Show website running time
-  runtime: true # show website running time or not
+  runtime: false # show website running time or not
   # Icon in footer, write fontawesome icon code here
-  icon: '<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>'
+  icon:
   # The start time of the website, format: YYYY/MM/DD HH:mm:ss
-  start: 2022/8/17 11:45:14
+  start: 2026/7/26 11:00:00
   # Site statistics
-  statistics: true # show site statistics or not (total articles, total words)
+  statistics: false # show site statistics or not (total articles, total words)
   # Footer message
   customize:
   # ICP record number. See https://beian.miit.gov.cn/
   icp:
-    enable: false # Whether to enable
-    number: # ICP record number
+    enable: true # Whether to enable
+    number: 闽ICP备2026030126号-1 # ICP record number
     url: # ICP record url
 # FOOTER <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
@@ -423,15 +425,18 @@ footer:
 # Docs: https://redefine-docs.ohevan.com/inject
 inject:
   # Whether to enable inject
-  enable: false
+  enable: true
   # Inject custom head html code
   head:
     -
     -
   # Inject custom footer html code
   footer:
-    -
-    -
+  #   - |
+  #     <div class="public-security-info my-1">
+  #       <a target="_blank" rel="nofollow" href="https://beian.mps.gov.cn/#/query/webSearch?code=请在此处填写公安备案号">公安备案：请在此处填写公安备案号</a>
+  #     </div>
+  #   -
 # INJECT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 # PLUGINS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
