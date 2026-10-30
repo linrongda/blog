@@ -2,6 +2,12 @@
 title: 新版office图标缩略图如何改回旧版
 date: 2026-08-14 22:00:00
 updated: 2026-08-14 23:00:00
+excerpt: 阐述如何通过 PowerShell 修改 Office 图标缩略图。
+tags:
+  - Office
+  - PowerShell
+categories:
+  - Windows
 ---
 
 ## 背景

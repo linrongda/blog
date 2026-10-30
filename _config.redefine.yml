@@ -266,11 +266,11 @@ home:
   excerpt_length: 200 # Max length of article excerpt
   # Article categories visibility
   categories:
-    enable: false # Whether to enable
+    enable: true # Whether to enable
     limit: 3 # Max number of categories to display
   # Article tags visibility
   tags:
-    enable: false # Whether to enable
+    enable: true # Whether to enable
     limit: 3 # Max number of tags to display
 # HOME PAGE ARTICLE SETTINGS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
@@ -296,7 +296,7 @@ articles:
       h6: 1.3rem
   # Word count. Requires hexo-wordcount (npm install hexo-wordcount). See https://github.com/willin/hexo-wordcount
   word_count:
-    enable: true # Whether to enable
+    enable: false # Whether to enable
     count: true # Whether to display word count
     min2read: true # Whether to display reading time
   # Author label

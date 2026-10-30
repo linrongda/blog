@@ -2,6 +2,15 @@
 title: 通过GHA部署SSL至EO
 date: 2026-08-09 21:00:00
 updated: 2026-08-09 23:00:00
+excerpt: 介绍如何通过 GitHub Actions 部署 SSL 证书至 EdgeOne CDN。
+tags:
+  - GitHub Actions
+  - SSL
+  - EdgeOne
+  - Cloudflare
+  - acme
+categories:
+  - 运维
 ---
 
 ## Cloudflare
