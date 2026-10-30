@@ -2,6 +2,13 @@
 title: PCRE库缺失问题
 date: 2026-08-08 15:00:00
 updated: 2026-08-08 16:00:00
+excerpt: 阐述如何解决 PCRE 库缺失问题。
+tags:
+  - PCRE
+  - Ubuntu
+  - Nginx
+categories:
+  - 运维
 ---
 
 ## 问题

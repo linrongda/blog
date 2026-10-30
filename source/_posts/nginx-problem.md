@@ -2,6 +2,12 @@
 title: Ubuntu 26.04自编译安装Nginx遇到的坑
 date: 2026-08-08 16:00:00
 updated: 2026-08-08 17:00:00
+excerpt: 分析 Ubuntu 安装 Nginx 遇到的问题，介绍对应的解决方式，并附上 Nginx 常用的配置。
+tags:
+  - Ubuntu
+  - Nginx
+categories:
+  - 运维
 ---
 
 ## PCRE库缺失
